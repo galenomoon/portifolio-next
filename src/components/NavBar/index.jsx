@@ -1,32 +1,60 @@
 import React from 'react'
+import { motion } from "framer-motion"
 
 export default function NavBar() {
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
+
   return (
-    <div className='w-full flex justify-between py-10 px-16 h-[120px] text-typography-300'>
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      className='w-full flex justify-between py-10 px-16 h-[120px] text-typography-300'
+    >
       <div className='flex w-full justify-between'>
-        <p className='text-start'>
+        <motion.p variants={item} className='text-start'>
           Guilherme Galeno
-        </p>
-        <p className='text-start'>
+        </motion.p>
+        <motion.p variants={item} className='text-start'>
           São Paulo,<br />
           Brazil
-        </p>
-        <p className='text-start'>
+        </motion.p>
+        <motion.p variants={item} className='text-start'>
           Currently Web Developer <br />
           in Clear Cloud Software
-        </p>
+        </motion.p>
       </div>
-      <div className='flex w-[70%] justify-end gap-10'>
-        <p className='text-start'>
+      <div className='flex w-[70%] justify-end gap-10' >
+        <motion.p variants={item} className='text-start'>
           About
-        </p>
-        <p className='text-start'>
+        </motion.p>
+        <motion.p variants={item} className='text-start'>
           Skills
-        </p>
-        <p className='text-start'>
+        </motion.p>
+        <motion.p variants={item} className='text-start'>
           Portifólio
-        </p>
+        </motion.p>
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -8,41 +8,96 @@ import galeno from '../../assets/galeno_img.png'
 import NavBar from '../NavBar'
 
 //styles
+import { motion } from "framer-motion"
 import { FaReact } from 'react-icons/fa'
 import { IoLogoFigma } from 'react-icons/io5'
-import { BsGit, BsWhatsapp, BsLinkedin, BsGithub } from 'react-icons/bs'
+import { BsGit, BsLinkedin, BsGithub } from 'react-icons/bs'
 import { SiRedux, SiNextdotjs, SiJavascript, SiTailwindcss } from 'react-icons/si'
 
 export default function Header() {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
+
   return (
     <div className='w-full h-screen relative text-center overflow-hidden flex flex-col'>
       <NavBar />
       <section className=''>
         <div className='flex flex-col items-center font-bold justify-center text-center text-typography-600 leading-[12vw]'>
-          <p className='text-[16vw]'>
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            className='text-[16vw]'
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { delay: 0.9 }
+              }
+            }}
+          >
             FRONTEND
-          </p>
-          <p className='text-[14.55vw]'>
+          </motion.p>
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            className='text-[14.55vw]'
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { delay: 1.3 }
+              }
+            }}
+          >
             DEVELOPER
-          </p>
+          </motion.p>
           <div className='w-[90vw] flex text-typography-500 items-center justify-between text-4xl'>
-            <div className='flex items-center gap-2'>
-              <FaReact />
-              <SiRedux />
-              <SiNextdotjs />
-              <SiJavascript />
-              <SiTailwindcss />
-              <BsGit />
-            </div>
-            <div className='flex items-center gap-2 text-4xl'>
-              <p className='font-normal text-2xl mx-2 leading-[1] self-end'>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              className='flex items-center gap-2'
+              variants={container}
+            >
+              {[FaReact, SiRedux, SiNextdotjs, SiJavascript, SiTailwindcss, BsGit].map((Icon, index) =>
+                <motion.div key={index} variants={item}>
+                  <Icon key={index} />
+                </motion.div>
+              )}
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={container}
+              className='flex items-center gap-2 text-4xl'
+            >
+              <motion.p variants={item} className='font-normal text-2xl mx-2 leading-[1] self-end'>
                 see more:
-              </p>
-              <BsLinkedin />
-              <BsGithub />
-              <IoLogoFigma />
-            </div>
-
+              </motion.p>
+              {[BsLinkedin, BsGithub, IoLogoFigma].map((Icon, index) =>
+                <motion.div key={index} variants={item}>
+                  <Icon key={index} />
+                </motion.div>
+              )}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -51,7 +106,21 @@ export default function Header() {
           I&apos;m currently focused in improve my <br /> knowledges, challeging myself and <br /> exploring the amazing technology world
         </p>
       </section>
-      <Image src={galeno} className='absolute bottom-0 left-1/2 h-[45vw] object-contain transform -translate-x-1/2' />
-    </div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { y: 40, opacity: 0 },
+          visible: {
+            y: 0,
+            opacity: 1,
+            transition: { delay: 1.5 }
+          }
+        }}
+        className='absolute bottom-0 self-center h-[45vw]'
+      >
+        <Image src={galeno} className='object-contain' />
+      </motion.div>
+    </div >
   )
 }
