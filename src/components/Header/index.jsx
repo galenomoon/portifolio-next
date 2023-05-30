@@ -49,7 +49,7 @@ export default function Header() {
       </section>
       <section className='w-full absolute bottom-10 px-16 flex'>
         <p className='text-start text-typography-300'>
-          I'm currently focused in improve my <br /> knowledges, challeging myself and <br /> exploring the amazing technology world
+          I&apos;m currently focused in improve my <br /> knowledges, challeging myself and <br /> exploring the amazing technology world
         </p>
       </section>
       <Image src={galeno} className='absolute bottom-0 left-1/2 h-[45vw] object-contain transform -translate-x-1/2' />
