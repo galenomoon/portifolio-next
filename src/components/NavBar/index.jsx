@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function NavBar() {
   return (
-    <div className='w-full flex justify-between py-10 px-16 h-[100px] text-typography-300'>
+    <div className='w-full flex justify-between py-10 px-16 h-[120px] text-typography-300'>
       <div className='flex w-full justify-between'>
         <p className='text-start'>
           Guilherme Galeno
