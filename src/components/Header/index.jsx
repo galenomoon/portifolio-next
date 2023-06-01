@@ -12,7 +12,7 @@ import { motion } from "framer-motion"
 import { FaReact } from 'react-icons/fa'
 import { IoLogoFigma } from 'react-icons/io5'
 import { BsGit, BsLinkedin, BsGithub } from 'react-icons/bs'
-import { SiRedux, SiNextdotjs, SiJavascript, SiTailwindcss } from 'react-icons/si'
+import { SiRedux, SiNextdotjs, SiJavascript, SiTailwindcss, SiTypescript, SiRuby } from 'react-icons/si'
 
 export default function Header() {
   const container = {
@@ -41,11 +41,11 @@ export default function Header() {
     <div className='w-full h-screen relative text-center overflow-hidden flex flex-col'>
       <NavBar />
       <section className=''>
-        <div className='flex flex-col items-center font-bold justify-center text-center text-typography-600 leading-[12vw]'>
+        <div className='flex flex-col  select-none items-center font-bold justify-center text-center text-typography-600 leading-[12vw]'>
           <motion.p
             initial="hidden"
             animate="visible"
-            className='text-[16vw]'
+            className='text-[14.55vw]'
             variants={{
               hidden: { opacity: 0 },
               visible: {
@@ -54,7 +54,7 @@ export default function Header() {
               }
             }}
           >
-            FRONTEND
+            FULLSTACK
           </motion.p>
           <motion.p
             initial="hidden"
@@ -77,7 +77,7 @@ export default function Header() {
               className='flex items-center gap-2'
               variants={container}
             >
-              {[FaReact, SiRedux, SiNextdotjs, SiJavascript, SiTailwindcss, BsGit].map((Icon, index) =>
+              {[FaReact, SiRedux, SiTypescript, SiNextdotjs, SiJavascript, SiRuby, SiTailwindcss, BsGit].map((Icon, index) =>
                 <motion.div key={index} variants={item}>
                   <Icon key={index} />
                 </motion.div>
@@ -110,14 +110,14 @@ export default function Header() {
         initial="hidden"
         animate="visible"
         variants={{
-          hidden: { y: 40, opacity: 0 },
+          hidden: { y: 120, opacity: 0 },
           visible: {
-            y: 0,
+            y: 35,
             opacity: 1,
             transition: { delay: 1.5 }
           }
         }}
-        className='absolute bottom-0 self-center h-[45vw]'
+        className='absolute w-[34%] bottom-0 self-center'
       >
         <Image src={galeno} className='object-contain' />
       </motion.div>
