@@ -69,6 +69,24 @@ export default function FirstSection() {
     },
   ]
 
+  const socials = [
+    {
+      Icon: BsGithub,
+      href: 'https://www.github.com/galenomoon',
+      style: "md:hover:text-[#000]"
+    },
+    {
+      Icon: BsLinkedin,
+      href: 'https://www.linkedin.com/in/guilherme-galeno-sena/',
+      style: "md:hover:text-[#0e76a8]"
+    },
+    {
+      Icon: IoLogoFigma,
+      href: 'https://www.figma.com/@galenomoon',
+      style: "md:hover:text-[#F24E1E]"
+    },
+  ]
+
 
   return (
     <div className='w-full h-screen relative text-center overflow-hidden flex flex-col'>
@@ -119,10 +137,10 @@ export default function FirstSection() {
               <motion.p variants={item} className='font-normal  md:text-3xl mx-2 leading-[1] self-end'>
                 see more:
               </motion.p>
-              {[BsLinkedin, BsGithub, IoLogoFigma].map((Icon, index) =>
-                <motion.div key={index} variants={item}>
-                  <Icon key={index} />
-                </motion.div>
+              {socials.map(({Icon, href, style}, index) =>
+               <motion.a key={index} variants={item} href={href} target='_blank' rel={"norrefer"}>
+               <Icon key={index} className={`${style} duration-200 hover:drop-shadow-xl`} />
+             </motion.a>
               )}
             </motion.div>
           </div>
@@ -140,7 +158,7 @@ export default function FirstSection() {
         <p className='md:text-start sm:text-center text-typography-300'>
           I&apos;m currently focused in improve my <br className='md:block sm:hidden' />
           knowledges, challeging myself and <br className='md:block sm:hidden' />
-          exploring the amazing technology world
+          exploring the amazing world of technology.
         </p>
       </motion.section>
       <motion.div
