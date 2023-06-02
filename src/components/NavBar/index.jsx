@@ -69,7 +69,7 @@ export default function NavBar() {
               </motion.div>
               <motion.div variants={container} className='flex w-full h-fit absolute bottom-0 text-white bg-typography-100 items-center justify-between py-8 px-4'>
                 <motion.p variants={item} className='text-md'>
-                  Let's talk!
+                  Let&apos;s talk!
                 </motion.p>
                 <motion.div variants={container} className='flex items-center gap-2'>
                   {[BsLinkedin, BsGithub, IoLogoFigma].map((Icon, index) =>
