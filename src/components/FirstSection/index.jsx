@@ -14,7 +14,7 @@ import { IoLogoFigma } from 'react-icons/io5'
 import { BsGit, BsLinkedin, BsGithub } from 'react-icons/bs'
 import { SiRedux, SiNextdotjs, SiJavascript, SiTailwindcss, SiTypescript, SiRuby } from 'react-icons/si'
 
-export default function Header() {
+export default function FirstSection() {
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -41,7 +41,7 @@ export default function Header() {
     <div className='w-full h-screen relative text-center overflow-hidden flex flex-col'>
       <NavBar />
       <section className='sm:mt-[12vh] md:m-0'>
-        <div className='flex flex-col  select-none items-center font-bold justify-center text-center text-typography-600 leading-[12vw]'>
+        <div className='flex flex-col select-none items-center font-bold justify-center text-center text-typography-600 leading-[12vw]'>
           <motion.p
             initial="hidden"
             animate="visible"
@@ -70,11 +70,11 @@ export default function Header() {
           >
             DEVELOPER
           </motion.p>
-          <div className='w-[90vw] flex text-typography-500 items-center justify-between sm:text-2xl md:text-4xl'>
+          <div className='w-[90vw] flex text-typography-500 items-center justify-between sm:text-xl md:text-4xl'>
             <motion.div
               initial="hidden"
               animate="visible"
-              className='flex items-center gap-2'
+              className='flex sm:justify-around md:w-auto sm:w-full md:m-0 sm:my-1 items-center gap-2'
               variants={container}
             >
               {[FaReact, SiRedux, SiTypescript, SiNextdotjs, SiJavascript, SiRuby, SiTailwindcss, BsGit].map((Icon, index) =>
@@ -87,9 +87,9 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               variants={container}
-              className='flex items-center gap-2'
+              className='flex items-baseline gap-2 sm:hidden md:flex'
             >
-              <motion.p variants={item} className='font-normal sm:text-xl md:text-3xl mx-2 leading-[1] self-end'>
+              <motion.p variants={item} className='font-normal  md:text-3xl mx-2 leading-[1] self-end'>
                 see more:
               </motion.p>
               {[BsLinkedin, BsGithub, IoLogoFigma].map((Icon, index) =>
@@ -102,7 +102,7 @@ export default function Header() {
         </div>
       </section>
       <motion.section
-        className='w-full absolute sm:top-[31%] md:top-auto md:bottom-10 px-16 sm:text-xl'
+        className='w-full absolute sm:top-[265px] md:top-auto md:bottom-10 md:px-16 sm:text-xl'
         initial="hidden"
         animate="visible"
         variants={{
@@ -113,8 +113,10 @@ export default function Header() {
           }
         }}
       >
-        <p className='md:text-start sm:text-center text-typography-400'>
-          I&apos;m currently focused in improve my <br /> knowledges, challeging myself and <br /> exploring the amazing technology world
+        <p className='md:text-start sm:text-center text-typography-300'>
+          I&apos;m currently focused in improve my <br className='md:block sm:hidden' />
+          knowledges, challeging myself and <br className='md:block sm:hidden' />
+          exploring the amazing technology world
         </p>
       </motion.section>
       <motion.div
@@ -128,7 +130,7 @@ export default function Header() {
             transition: { delay: 1.5 }
           }
         }}
-        className='absolute sm:w-[500px] md:w-[34%] bottom-0 self-center'
+        className='absolute sm:w-[90%] md:w-[34%] bottom-0 self-center'
       >
         <Image src={galeno} className='object-contain' />
       </motion.div>

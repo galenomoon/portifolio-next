@@ -1,9 +1,9 @@
 //components
-import Header from '@/components/Header'
+import FirstSection from '@/components/FirstSection'
 import Head from 'next/head'
 
 
-export default function Home({avatar}) {
+export default function Home({ avatar }) {
 
   const title = "Galenomoon - Fullstack Developer: Showcasing Programming Skills and Expertise"
   const description = "Explore the diverse programming skills and expertise of Galenomoon, a fullstack developer specializing in web and application development. Discover a portfolio featuring innovative projects, cutting-edge technologies, and exceptional problem-solving abilities."
@@ -20,12 +20,12 @@ export default function Home({avatar}) {
         <meta name="og:type" content="website" />
         <meta name="og:site_name" content="Galenomoon" />
       </Head>
-      <Header />
+      <FirstSection />
     </main>
   )
 }
 
-export async function getServerSideProps(){
+export async function getServerSideProps() {
   const res = await fetch('https://api.github.com/users/galenomoon')
   const data = await res.json()
 
