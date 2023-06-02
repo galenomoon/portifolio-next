@@ -34,7 +34,6 @@ export default function NavBar() {
       >
         <motion.button
           whileTap={{ scale: .8 }}
-          // transition={{ duration: 0.9, type: 'spring', bounce: 0.5 }}
           onClick={() => setIsOpen(!isOpen)}
           className='text-2xl p-3 text-typography-100 bg-white flex items-center justify-center rounded-full z-[101]'
         >
