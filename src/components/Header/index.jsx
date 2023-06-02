@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <div className='w-full h-screen relative text-center overflow-hidden flex flex-col'>
       <NavBar />
-      <section className=''>
+      <section className='sm:mt-[12vh] md:m-0'>
         <div className='flex flex-col  select-none items-center font-bold justify-center text-center text-typography-600 leading-[12vw]'>
           <motion.p
             initial="hidden"
@@ -70,7 +70,7 @@ export default function Header() {
           >
             DEVELOPER
           </motion.p>
-          <div className='w-[90vw] flex text-typography-500 items-center justify-between text-4xl'>
+          <div className='w-[90vw] flex text-typography-500 items-center justify-between sm:text-2xl md:text-4xl'>
             <motion.div
               initial="hidden"
               animate="visible"
@@ -87,9 +87,9 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               variants={container}
-              className='flex items-center gap-2 text-4xl'
+              className='flex items-center gap-2'
             >
-              <motion.p variants={item} className='font-normal text-2xl mx-2 leading-[1] self-end'>
+              <motion.p variants={item} className='font-normal sm:text-xl md:text-3xl mx-2 leading-[1] self-end'>
                 see more:
               </motion.p>
               {[BsLinkedin, BsGithub, IoLogoFigma].map((Icon, index) =>
@@ -101,11 +101,22 @@ export default function Header() {
           </div>
         </div>
       </section>
-      <section className='w-full absolute bottom-10 px-16 flex'>
-        <p className='text-start text-typography-300'>
+      <motion.section
+        className='w-full absolute sm:top-[31%] md:top-auto md:bottom-10 px-16 sm:text-xl'
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { delay: 2 }
+          }
+        }}
+      >
+        <p className='md:text-start sm:text-center text-typography-400'>
           I&apos;m currently focused in improve my <br /> knowledges, challeging myself and <br /> exploring the amazing technology world
         </p>
-      </section>
+      </motion.section>
       <motion.div
         initial="hidden"
         animate="visible"
@@ -117,7 +128,7 @@ export default function Header() {
             transition: { delay: 1.5 }
           }
         }}
-        className='absolute w-[34%] bottom-0 self-center'
+        className='absolute sm:w-[500px] md:w-[34%] bottom-0 self-center'
       >
         <Image src={galeno} className='object-contain' />
       </motion.div>

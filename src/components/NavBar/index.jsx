@@ -29,7 +29,7 @@ export default function NavBar() {
       variants={container}
       initial="hidden"
       animate="visible"
-      className='w-full flex justify-between py-10 px-16 h-[120px] text-typography-300'
+      className='w-full sm:hidden md:flex justify-between py-10 px-16 h-[120px] text-typography-300'
     >
       <div className='flex w-full justify-between'>
         <motion.p variants={item} className='text-start'>
