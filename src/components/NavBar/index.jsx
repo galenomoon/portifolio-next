@@ -6,6 +6,10 @@ import { IoClose, IoLogoFigma } from 'react-icons/io5';
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
+//assets
+import Image from 'next/image';
+import logo from '../../assets/opacity_logo.png';
+
 export default function NavBar() {
   const [isOpen, setIsOpen] = React.useState(false)
 
@@ -40,7 +44,11 @@ export default function NavBar() {
           {isOpen ? <IoClose size={40} /> : <GiHamburgerMenu />}
         </motion.button>
         <motion.p variants={item} className='text-start text-xl'>
-          Guilherme Galeno
+          <Image
+            src={logo}
+            width={200}
+            height={50}
+          />
         </motion.p>
         <motion.article
           className='flex flex-col items-center top-0 left-0 fixed bg-white justify-center gap-4 text-4xl z-[100] overflow-hidden'
@@ -90,7 +98,11 @@ export default function NavBar() {
       >
         <div className='flex w-full justify-between'>
           <motion.p variants={item} className='text-start'>
-            Guilherme Galeno
+            <Image
+              src={logo}
+              width={200}
+              height={50}
+            />
           </motion.p>
           <motion.p variants={item} className='text-start'>
             São Paulo,<br />
