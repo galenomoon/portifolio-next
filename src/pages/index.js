@@ -3,6 +3,7 @@ import FirstSection from '@/components/FirstSection'
 import Head from 'next/head'
 
 import banner from '@/assets/banner.png'
+import SkillsAndExperience from '@/components/SkillsAndExperience'
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <meta name="og:site_name" content="Galenomoon" />
       </Head>
       <FirstSection />
+      {/* <SkillsAndExperience /> */}
     </main>
   )
 }
