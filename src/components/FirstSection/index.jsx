@@ -145,7 +145,7 @@ export default function FirstSection() {
       </div>
       <div className='w-full py-8'>
         <motion.p
-          className='w-full sm:translate-y-[40px] md:translate-y-0 sm:top-[265px] md:top-auto md:bottom-10 md:px-16 sm:text-lg md:text-start sm:text-center text-typography-300'
+          className='w-full sm:px-3 sm:translate-y-[40px] md:translate-y-0 sm:top-[265px] md:top-auto md:bottom-10 md:px-16 sm:text-lg md:text-start sm:text-center text-typography-300'
           initial="hidden"
           animate="visible"
           variants={{
@@ -153,7 +153,7 @@ export default function FirstSection() {
             visible: { opacity: 1, transition: { delay: 2 } }
           }}
         >
-          I&apos;m currently focused in improve my <br className='md:block sm:hidden' />
+          I&apos;m currently focused in improve my <br className='md:block' />
           knowledges, challeging myself and <br className='md:block sm:hidden' />
           exploring the amazing world of technology.
         </motion.p>
