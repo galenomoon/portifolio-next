@@ -89,7 +89,7 @@ export default function FirstSection() {
   ]
 
   return (
-    <div className='w-full h-screen max-h-screen relative items-center text-center justify-between overflow-hidden flex flex-col'>
+    <main className='w-full h-screen max-h-screen relative items-center text-center justify-between overflow-hidden flex flex-col'>
       <NavBar />
       <div className='self-center sm:translate-y-[40px] md:translate-y-0 flex flex-col select-none items-center justify-center text-center text-typography-600'>
         <BackgroundText>
@@ -143,14 +143,14 @@ export default function FirstSection() {
       <motion.div
         initial="hidden"
         animate="visible"
-        className='sm:flex md:absolute bottom-0'
+        className='sm:flex md:absolute bottom-0 h-[90vh]'
         variants={{
           hidden: { y: 120, opacity: 0 },
           visible: { y: 0, opacity: 1, transition: { delay: 1.5 } }
         }}
       >
-        <Image alt="developer" src={galeno} className='object-contain' />
+        <Image alt="developer" src={galeno} className='object-contain ' />
       </motion.div>
-    </div >
+    </main >
   )
 }
