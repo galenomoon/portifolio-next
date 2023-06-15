@@ -22,11 +22,21 @@ module.exports = {
           700: '#3837381A',
           800: '#3837380D',
           900: '#38373805',
+          white: {
+            100: '#D3D3D4',
+            200: '#D3D3D4E6',
+            300: '#D3D3D4CC',
+            400: '#D3D3D499',
+            500: '#D3D3D466',
+            600: '#D3D3D433',
+            700: '#D3D3D41A',
+            800: '#D3D3D40D',
+            900: '#D3D3D405',
+          }
         }
       },
       backgroundImage: {
-        'main-gradient': 'linear-gradient(107.65deg, #D9A7F1 0.35%, #7AAAF6 48.28%, #63C3BE 96.21%)',
-        'seconday-bg': 'linear-gradient(288.13deg, #3B3742 15.91%, rgba(0, 0, 0, 0) 98.65%), radial-gradient(50% 50% at 50% 50%, #3A3940 0%, #28272C 100%)'
+        'main-gradient': 'linear-gradient(107.65deg, #D9A7F1 0.35%, #7AAAF6 48.28%, #63C3BE 96.21%)'
       },
     },
   },

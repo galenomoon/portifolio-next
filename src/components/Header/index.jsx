@@ -6,6 +6,7 @@ import galeno from '../../assets/galeno_img.png'
 
 //components
 import NavBar from '../NavBar'
+import BackgroundText from '../BackgroundText'
 
 //styles
 import { motion } from "framer-motion"
@@ -90,29 +91,10 @@ export default function FirstSection() {
   return (
     <div className='w-full h-screen max-h-screen relative items-center text-center justify-between overflow-hidden flex flex-col'>
       <NavBar />
-      <div className='self-center sm:translate-y-[40px] md:translate-y-0 flex flex-col select-none items-center font-bold justify-center text-center text-typography-600 leading-[12vw]'>
-        <motion.p
-          initial="hidden"
-          animate="visible"
-          className='text-[14.55vw]'
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { delay: 0.9 } }
-          }}
-        >
-          FULLSTACK
-        </motion.p>
-        <motion.p
-          initial="hidden"
-          animate="visible"
-          className='text-[14.55vw]'
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { delay: 1.3 } }
-          }}
-        >
-          DEVELOPER
-        </motion.p>
+      <div className='self-center sm:translate-y-[40px] md:translate-y-0 flex flex-col select-none items-center justify-center text-center text-typography-600'>
+        <BackgroundText>
+          Fullstack Developer
+        </BackgroundText>
         <div className='w-[90vw] flex text-typography-500 items-center justify-between sm:text-xl md:text-4xl'>
           <motion.div
             initial="hidden"
@@ -167,7 +149,7 @@ export default function FirstSection() {
           visible: { y: 0, opacity: 1, transition: { delay: 1.5 } }
         }}
       >
-        <Image src={galeno} className='object-contain' />
+        <Image alt="developer" src={galeno} className='object-contain' />
       </motion.div>
     </div >
   )
