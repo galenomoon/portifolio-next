@@ -50,13 +50,13 @@ export default function SkillsAndExperience() {
       period: '2021',
     },
     {
-      title: 'System Developer Couse',
-      subtitle: 'Full Stack Developer',
+      title: 'System Developer - Technical Course',
+      subtitle: 'Full Stack Developer - Etec Drª Ruth Cardoso, São Vicente - SP',
       period: '2022',
     },
     {
       title: 'Clear Cloud Software',
-      subtitle: 'Front end and Team Leader - Web development and UI/UX',
+      subtitle: 'Front-end Developer, Team Leader and UI/UX Designer',
       period: 'now'
     }
   ]

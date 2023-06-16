@@ -95,7 +95,7 @@ export default function FirstSection() {
         <BackgroundText>
           Fullstack Developer
         </BackgroundText>
-        <div className='w-[90vw] flex text-typography-500 items-center justify-between sm:text-xl md:text-4xl'>
+        <div className='w-[90vw] flex text-typography-500 items-center justify-between sm:text-xl md:text-3xl'>
           <motion.div
             initial="hidden"
             animate="visible"
@@ -114,7 +114,7 @@ export default function FirstSection() {
             variants={container}
             className='flex items-baseline gap-2 sm:hidden md:flex'
           >
-            <motion.p variants={item} className='font-normal  md:text-3xl mx-2 leading-[1] self-end'>
+            <motion.p variants={item} className='font-normal  md:text-2xl mx-2 leading-[1] self-end'>
               see more:
             </motion.p>
             {socials.map(({ Icon, href, style }, index) =>
