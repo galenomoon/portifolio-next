@@ -45,6 +45,7 @@ export default function NavBar() {
         </motion.button>
         <motion.p variants={item} className='text-start text-xl'>
           <Image
+            alt="logo"
             src={logo}
             width={200}
             height={50}
@@ -99,6 +100,7 @@ export default function NavBar() {
         <div className='flex w-full justify-between'>
           <motion.p variants={item} className='text-start'>
             <Image
+              alt="logo"
               src={logo}
               width={200}
               height={50}
