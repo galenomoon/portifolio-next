@@ -112,6 +112,7 @@ export default function SkillsAndExperience() {
           )}
         </div>
         <section className='flex between w-full h-full text-lg gap-18 mt-30 pb-10 self-end'>
+        
         </section>
       </article>
     </div>

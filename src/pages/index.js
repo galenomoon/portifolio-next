@@ -1,10 +1,11 @@
 //components
-import FirstSection from '@/components/Header'
 import Head from 'next/head'
-
-import banner from '@/assets/banner.png'
+import FirstSection from '@/components/Header'
+import ThisProject from '@/components/ThisProject'
 import SkillsAndExperience from '@/components/SkillsAndExperience'
 
+//assets
+import banner from '@/assets/banner.png'
 
 export default function Home() {
   const title = "Galenomoon - Fullstack Developer: Showcasing Programming Skills and Expertise"
@@ -24,6 +25,7 @@ export default function Home() {
       </Head>
       <FirstSection />
       <SkillsAndExperience />
+      <ThisProject />
     </main>
   )
 }
