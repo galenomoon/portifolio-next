@@ -30,7 +30,7 @@ export default function ThisProject() {
           <AnimateInView>
             <p>
               — 👨🏽‍💻 <span className='mx-1 font-medium text-xl'>Repository: </span> <br />
-              To further demonstrate my proficiency, I have also provided a repository where you can delve into the codebase and explore the intricacies of the project's implementation. The repository showcases my disciplined approach to version control and collaborative development.
+              To further demonstrate my proficiency, I have also provided a repository where you can delve into the codebase and explore the intricacies of the project&apos;s implementation. The repository showcases my disciplined approach to version control and collaborative development.
             </p>
           </AnimateInView>
           <AnimateInView>
