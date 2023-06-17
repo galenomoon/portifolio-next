@@ -32,7 +32,7 @@ export default function ThisProject() {
             — 🖌️ <span className='mx-1 font-medium text-xl'>UI/UX Magic: </span> <br /> Creating captivating interfaces and experiences with Figma.
           </p>
           <p>
-            — 💡 <span className='mx-1 font-medium text-xl'>Design Thinking: </span> <br /> Unleashing creativity and problem-solving with Figma's design thinking approach.
+            — 💡 <span className='mx-1 font-medium text-xl'>Design Thinking: </span> <br /> Unleashing creativity and problem-solving with Figma&apos;s design thinking approach.
           </p>
         </section>
       </article>
