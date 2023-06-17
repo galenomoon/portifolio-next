@@ -11,7 +11,7 @@ export default function ThisProject() {
 
   return (
     <div className='sm:flex-col sm:overflow-hidden md:flex-row text-typography-white-100  bg-gradient-to-tr from-[#28272C] to-[#28272C] w-full min-h-screen max-h-fit relative items-center text-center justify-between  flex'>
-      <BackgroundText white lines={['Repository', '& Figma']} className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
+      <BackgroundText white lines={['Repository', '& Figma']} className='absolute' />
       <article className='flex flex-col w-full h-fit py-10 gap-5 z-10'>
         <SectionTitle title='Repository & Figma' emoji='🤯' />
         <section className='flex flex-col w-full text-start text-lg md:px-28 sm:px-10 gap-5'>

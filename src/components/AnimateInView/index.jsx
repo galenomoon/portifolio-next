@@ -8,7 +8,7 @@ export default function AnimateInView({ children, duration, direction="X", inver
   return (
     <div
       ref={ref}
-      className={`w-fit h-fit flex-shrink-0 ${className}`}
+      className={`${className}`}
       style={{
         transform: isInView ? "none" : `translate${direction}(${inverse ? "" : "-"}200px)`,
         opacity: isInView ? 1 : 0,
