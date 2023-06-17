@@ -18,7 +18,7 @@ export default function GitHubRepository() {
         </div>
       </div>
       <div className="h-4 text-start text-sm">
-        ⏭️⚛️ - See more about my and my developer skills in my Web Portifolio that I created using Next.js + TailwindCSS + Framer Motion
+        ⏭️⚛️ - See more about me and my developer skills in my Web Portifolio that I created using Next.js + TailwindCSS + Framer Motion
       </div>
       <div className="flex flex-col items-start h-[60px] justify-end">
         <div className='flex gap-2 items-center justify-center'>
