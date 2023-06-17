@@ -43,14 +43,6 @@ export default function NavBar() {
         >
           {isOpen ? <IoClose size={40} /> : <GiHamburgerMenu />}
         </motion.button>
-        <motion.p variants={item} className='text-start text-xl'>
-          <Image
-            alt="logo"
-            src={logo}
-            width={200}
-            height={50}
-          />
-        </motion.p>
         <motion.article
           className='flex flex-col items-center top-0 left-0 fixed bg-white justify-center gap-4 text-4xl z-[100] overflow-hidden'
           initial={{ width: '0px', height: '0px', top: '30px', left: '30px', position: 'absolute' }}

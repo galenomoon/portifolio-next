@@ -3,6 +3,7 @@ import React from 'react'
 //assets
 import Image from 'next/image'
 import galeno from '../../assets/galeno_img.png'
+import logo from '../../assets/opacity_logo.png';
 
 //components
 import NavBar from '../NavBar'
@@ -91,7 +92,16 @@ export default function FirstSection() {
   return (
     <main className='w-full h-screen max-h-screen relative items-center text-center justify-between overflow-hidden flex flex-col'>
       <NavBar />
-      <div className='sm:mt-[100px] md:mt-0 self-center sm:translate-y-[40px] md:translate-y-0 flex flex-col select-none items-center justify-center text-center text-typography-600'>
+      <div className=' md:mt-0 self-center sm:translate-y-[40px] md:translate-y-0 flex flex-col select-none items-center justify-center text-center text-typography-600'>
+        <motion.p variants={item} className='text-start text-xl md:hidden sm:flex sm:w-full -translate-y-[23px] items-start justify-end sm:h-fit'>
+          <Image
+            alt="logo"
+            className='object-contain'
+            src={logo}
+            width={200}
+            height={50}
+          />
+        </motion.p>
         <BackgroundText>
           Fullstack Developer
         </BackgroundText>
