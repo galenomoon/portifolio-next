@@ -34,7 +34,7 @@ export default function NavBar() {
         variants={container}
         initial="hidden"
         animate="visible"
-        className='w-full sm:flex z-[100] md:hidden justify-between p-4 h-[90px] items-center  text-typography-400'
+        className='w-full fixed sm:flex z-[300] md:hidden justify-between p-4 h-[90px] items-center  text-typography-400'
       >
         <motion.button
           whileTap={{ scale: .8 }}

@@ -1,7 +1,7 @@
 //components
 import Head from 'next/head'
 import FirstSection from '@/components/Header'
-import ThisProject from '@/components/ThisProject'
+import RepositoryAndFigma from '@/components/RepositoryAndFigma'
 import SkillsAndExperience from '@/components/SkillsAndExperience'
 
 //assets
@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <FirstSection />
       <SkillsAndExperience />
-      <ThisProject />
+      <RepositoryAndFigma />
     </main>
   )
 }

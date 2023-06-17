@@ -91,11 +91,11 @@ export default function FirstSection() {
   return (
     <main className='w-full h-screen max-h-screen relative items-center text-center justify-between overflow-hidden flex flex-col'>
       <NavBar />
-      <div className='self-center sm:translate-y-[40px] md:translate-y-0 flex flex-col select-none items-center justify-center text-center text-typography-600'>
+      <div className='sm:mt-[100px] md:mt-0 self-center sm:translate-y-[40px] md:translate-y-0 flex flex-col select-none items-center justify-center text-center text-typography-600'>
         <BackgroundText>
           Fullstack Developer
         </BackgroundText>
-        <div className='w-[90vw] flex text-typography-500 items-center justify-between sm:text-xl md:text-3xl'>
+        <div className='z-10 w-[90vw] flex text-typography-500 items-center justify-between sm:text-xl md:text-3xl'>
           <motion.div
             initial="hidden"
             animate="visible"
