@@ -82,8 +82,8 @@ export default function SkillsAndExperience() {
           </AnimateInView>
           <article className='grid md:grid-cols-3 sm:grid-cols-2 gap-3 w-fit'>
             {skills?.map(({ label, Icon }, index) =>
-              <AnimateInView direction='Y' duration={`0.${4 + index}s`} className={'w-auto'}>
-                <div key={index} className='flex sm:items-center md:items-start flex-col sm:w-full md:w-fit justify-center gap-2'>
+              <AnimateInView key={index} direction='Y' duration={`0.${4 + index}s`} className={'w-auto'}>
+                <div className='flex sm:items-center md:items-start flex-col sm:w-full md:w-fit justify-center gap-2'>
                   <div className='text-typography-100 flex items-center justify-center w-[50px] h-[50px] bg-gradient-to-br from-[#A193B9] via-[#8A9EC0] to-[#709F9E] rounded-full'>
                     {Icon ? Icon() : null}
                   </div>
@@ -102,8 +102,8 @@ export default function SkillsAndExperience() {
             </h2>
           </AnimateInView>
           {experiences?.map((experience, index) =>
-            <AnimateInView duration={`0.${4 + index}s`} className={'w-full'}>
-              <div key={index} className='flex py-3 border-y-2 border-typography-white-300 mx-10'>
+            <AnimateInView key={index} duration={`0.${4 + index}s`} className={'w-full'}>
+              <div className='flex py-3 border-y-2 border-typography-white-300 mx-10'>
                 <div className='w-[60px] px-16 flex items-center justify-center'>
                   <span className='text-lg font-light uppercase'>{experience.period}</span>
                 </div>
