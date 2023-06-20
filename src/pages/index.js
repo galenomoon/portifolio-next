@@ -1,5 +1,6 @@
 //components
 import Head from 'next/head'
+import Projects from '@/components/Projects'
 import FirstSection from '@/components/Header'
 import RepositoryAndFigma from '@/components/RepositoryAndFigma'
 import SkillsAndExperience from '@/components/SkillsAndExperience'
@@ -26,6 +27,7 @@ export default function Home() {
       <FirstSection />
       <SkillsAndExperience />
       <RepositoryAndFigma />
+      <Projects />
     </main>
   )
 }
