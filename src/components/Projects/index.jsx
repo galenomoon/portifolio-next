@@ -9,6 +9,7 @@ import lifecell_desktop from '../../assets/projects/lifecell/desktop.png'
 import lifecell_mobile from '../../assets/projects/lifecell/mobile.png'
 import obraminha_desktop from '../../assets/projects/obraminha/desktop.png'
 import obraminha_mobile from '../../assets/projects/obraminha/mobile.png'
+import AnimateInView from '../AnimateInView';
 
 export default function Projects() {
 
@@ -33,7 +34,10 @@ export default function Projects() {
         <div className='absolute'>
           <SectionTitle title='Latest Projects' emoji='🤯' />
         </div>
+        <AnimateInView className={'w-full h-full'}>
+
         <Slider projects={projects} />
+        </AnimateInView>
       </article>
     </div >
   )
