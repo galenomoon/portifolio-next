@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useInView } from "framer-motion";
 
-export default function SectionTitle({ title, emoji, dark }) {
+export default function SectionTitle({ title, emoji, dark, className }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -17,7 +17,7 @@ export default function SectionTitle({ title, emoji, dark }) {
       }}
       className='flex gap-4 place-items-baseline mx-10 relative font-semibold mb-10'
     >
-      <figure className={`sm:w-[40px] md:w-[60px] sm:h-[40px] md:h-[60px] sm:text-xl md:text-3xl flex-shrink-0 -translate-y-4 rounded-2xl bg-gradient-to-br ${color} flex justify-center items-center`}>
+      <figure className={`sm:w-[40px] md:w-[60px] sm:h-[40px] md:h-[60px] sm:text-xl md:text-3xl flex-shrink-0 -translate-y-4 rounded-2xl bg-gradient-to-br ${color} flex justify-center items-center `}>
         {emoji}
       </figure>
       <h1
@@ -26,7 +26,7 @@ export default function SectionTitle({ title, emoji, dark }) {
           opacity: isInView ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s"
         }}
-        className='flex flex-wrap sm:w-[50vw] md:w-[400px] sm:text-5xl md:text-6xl text-start'>
+        className={`flex flex-wrap sm:w-[50vw] md:w-[400px] sm:text-5xl md:text-6xl text-start ${className}`}>
         {title}
       </h1>
       <div className='w-[10vw] h-[5px] rounded bg-[#6A5BAA] absolute -bottom-6 -left-10' />

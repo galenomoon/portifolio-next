@@ -7,6 +7,7 @@ import SkillsAndExperience from '@/components/SkillsAndExperience'
 
 //assets
 import banner from '@/assets/banner.png'
+import ContactMe from '@/components/ContactMe'
 
 export default function Home() {
   const title = "Galenomoon - Fullstack Developer: Showcasing Programming Skills and Expertise"
@@ -28,6 +29,7 @@ export default function Home() {
       <SkillsAndExperience />
       <RepositoryAndFigma />
       <Projects />
+      <ContactMe />
     </main>
   )
 }
