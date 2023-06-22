@@ -29,13 +29,11 @@ export default function Projects() {
 
   return (
     <div className='sm:flex-col sm:overflow-hidden md:flex-row text-typography-100 bg-background-main w-full min-h-screen max-h-fit relative items-center text-center justify-center  flex'>
-      <article className='flex flex-col w-full h-screen py-10 gap-5 z-10'>
+      <article className='flex flex-col w-full h-screen max-h-fit py-10 gap-5 z-10'>
         <div className='absolute'>
-          <SectionTitle title='Latest Projects' emoji='🤯' className='absolute' />
+          <SectionTitle title='Latest Projects' emoji='🤯' />
         </div>
-        <section className='z-[200] flex flex-col w-full h-full items-center justify-center text-lg md:px-28 sm:px-10 gap-5'>
-          <Slider projects={projects} />
-        </section>
+        <Slider projects={projects} />
       </article>
     </div >
   )

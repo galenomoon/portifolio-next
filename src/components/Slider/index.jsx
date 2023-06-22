@@ -1,65 +1,40 @@
-import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import React from "react";
 import BackgroundText from "../BackgroundText";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
-const variants = {
-  center: { zIndex: 1, x: 0, opacity: 1 },
-  enter: (direction) => ({ x: direction > 0 ? 1000 : -1000, opacity: 0 }),
-  exit: (direction) => ({ zIndex: 0, x: direction < 0 ? 1000 : -1000, opacity: 0 })
-};
+import { Carousel } from 'flowbite-react';
+
 
 export default function Slider({ projects = [] }) {
-  const [[page, direction], setPage] = useState([0, 0]);
-  const imageIndex = page % projects.length;
-  const paginate = (newDirection) => setPage([page + newDirection, newDirection]);
 
   return (
-    <div className="w-full h-full flex flex-1 items-center justify-center z-20">
-      <button className="p-2 text-4xl text-typography-100 z-30" onClick={() => paginate(1)}>
-        <SlArrowLeft />
-      </button>
-      <div className="flex flex-col items-center justify-center">
-        <motion.div
-          key={page}
-          exit="exit"
-          initial="enter"
-          dragElastic={1}
-          animate="center"
-          custom={direction}
-          variants={variants}
-          dragConstraints={{ left: 0, right: 0 }}
-          transition={{ x: { type: "spring", stiffness: 300, damping: 30 }, opacity: { duration: 0.2 } }}
-          className="flex flex-col items-center justify-center"
-        >
-          <BackgroundText lines={[projects?.[imageIndex]?.title]} className='absolute' />
-          <motion.div className="flex flex-col items-center justify-center mb-4 z-20">
-            <AnimatePresence initial={false} custom={direction}>
-              <h2 className="font-semibold text-5xl uppercase">
-                {projects?.[imageIndex]?.title}
-              </h2>
-              <p className="text-xl">
-                {projects?.[imageIndex]?.description}
-              </p>
-            </AnimatePresence>
-          </motion.div>
-          <motion.div className="w-full h-full flex gap-10 items-center justify-center z-20" >
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.img
-                className="w-[65%] object-contain"
-                src={projects?.[imageIndex]?.desktop_image?.src}
-              />
-              <motion.img
-                className="h-[65%] object-contain"
-                src={projects?.[imageIndex]?.mobile_image?.src}
-              />
-            </AnimatePresence>
-          </motion.div>
-        </motion.div>
-      </div>
-      <button className="p-2 text-4xl text-typography-100 z-30" onClick={() => paginate(-1)}>
-        <SlArrowRight />
-      </button>
-    </div>
+    <Carousel
+      indicators={false}
+      className="w-full h-full mt-10"
+      leftControl={<SlArrowLeft className="sm:text-3xl md:text-5xl text-typography-100" />}
+      rightControl={<SlArrowRight className="sm:text-3xl md:text-5xl text-typography-100" />}
+    >
+      {projects.map((project, index) => (
+        <div key={index} className="flex flex-col items-center h-full justify-center mb-4 z-20">
+          <BackgroundText lines={[project?.title]} className='absolute' />
+          <h2 className="font-semibold text-5xl uppercase">
+            {project?.title}
+          </h2>
+          <p className="text-xl">
+            {project?.description}
+          </p>
+          <div className="flex md:gap-10 sm:gap-4 items-center justify-center z-20 mt-6" >
+            <img
+              className="sm:w-[55vw] md:w-auto md:h-[40vh] object-contain"
+              src={project?.desktop_image?.src}
+            />
+            <img
+              className="sm:h-[16vh] md:w-auto md:h-[40vh] object-contain"
+              src={project?.mobile_image?.src}
+            />
+          </div>
+        </div>
+      ))}
+    </Carousel>
   );
 };

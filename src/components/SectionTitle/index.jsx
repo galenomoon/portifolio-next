@@ -26,7 +26,7 @@ export default function SectionTitle({ title, emoji, dark }) {
           opacity: isInView ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s"
         }}
-        className='flex flex-wrap w-[400px] sm:text-5xl md:text-7xl text-start'>
+        className='flex flex-wrap sm:w-[50vw] md:w-[400px] sm:text-5xl md:text-6xl text-start'>
         {title}
       </h1>
       <div className='w-[10vw] h-[5px] rounded bg-[#6A5BAA] absolute -bottom-6 -left-10' />
