@@ -23,7 +23,7 @@ export default function ContactMe() {
 
   return (
     <div className='flex-col relative text-typography-white-100 overflow-hidden bg-gradient-to-tr from-[#28272C] to-[#28272C] w-full h-screen items-center text-center justify-between  flex'>
-      <article className='flex flex-col w-full h-screen relative max-h-fit py-10 gap-5 z-10'>
+      <article className='flex flex-col w-full h-screen relative max-h-fit py-10 gap-5 z-10 mt-8'>
         <BackgroundText white lines={["let's discuss", 'your project']} className='absolute top-1/4 ' />
         <SectionTitle title="Let's Discuss Your Project" emoji='🤩' className={'sm:!w-full md:!w-[400px]'} />
         <div className="flex flex-col sm:w-full md:w-[50vw]">
