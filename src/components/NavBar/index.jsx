@@ -10,8 +10,13 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import Image from 'next/image';
 import logo from '../../assets/opacity_logo.png';
 
+//context
+import { ScrollContext } from '@/pages';
+
 export default function NavBar() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const { ref_skills_and_experience, ref_projects, ref_contact, scrollTo } = React.useContext(ScrollContext)
+  const item = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1 } };
 
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -22,10 +27,24 @@ export default function NavBar() {
     }
   };
 
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 }
-  };
+  const navbar_options = [
+    {
+      name: 'Skills',
+      ref: ref_skills_and_experience,
+    },
+    {
+      name: 'Portifolio',
+      ref: ref_projects,
+    },
+    {
+      name: 'Contact',
+      ref: ref_contact,
+    },
+  ]
+
+  function mobileScrollTo(ref) {
+    return scrollTo(ref, () => setIsOpen(false))
+  }
 
 
   return (
@@ -57,15 +76,11 @@ export default function NavBar() {
           {isOpen &&
             <>
               <motion.div variants={container} className='flex flex-col items-center justify-center gap-7'>
-                <motion.p variants={item} className='text-start'>
-                  About
-                </motion.p>
-                <motion.p variants={item} className='text-start'>
-                  Skills
-                </motion.p>
-                <motion.p variants={item} className='text-start'>
-                  Portifólio
-                </motion.p>
+                {navbar_options.map(({ name, ref }, index) =>
+                  <motion.button onClick={() => mobileScrollTo(ref)} key={index} variants={item} className='text-start'>
+                    {name}
+                  </motion.button>
+                )}
               </motion.div>
               <motion.div variants={container} className='flex w-full h-fit absolute bottom-0 text-white bg-typography-100 items-center justify-between py-8 px-4'>
                 <motion.p variants={item} className='text-md'>
@@ -108,15 +123,11 @@ export default function NavBar() {
           </motion.p>
         </div>
         <div className='flex w-[70%] justify-end gap-10' >
-          <motion.p variants={item} className='text-start'>
-            About
-          </motion.p>
-          <motion.p variants={item} className='text-start'>
-            Skills
-          </motion.p>
-          <motion.p variants={item} className='text-start'>
-            Portifólio
-          </motion.p>
+          {navbar_options.map(({ name, ref }, index) =>
+            <motion.button onClick={() => mobileScrollTo(ref)} key={index} variants={item} className='text-start'>
+              {name}
+            </motion.button>
+          )}
         </div>
       </motion.div>
     </>

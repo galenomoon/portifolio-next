@@ -1,12 +1,19 @@
 import React from 'react'
+
+//components
 import SectionTitle from '../SectionTitle'
-import BackgroundText from '../BackgroundText'
-import { SiGithub, SiLinkedin } from 'react-icons/si'
 import AnimateInView from '../AnimateInView'
+import BackgroundText from '../BackgroundText'
+
+//styles
 import { MdEmail } from 'react-icons/md'
+import { SiGithub, SiLinkedin } from 'react-icons/si'
+
+//context
+import { ScrollContext } from '@/pages'
 
 export default function ContactMe() {
-
+  const { ref_contact } = React.useContext(ScrollContext)
 
   const contacts = [
     {
@@ -22,7 +29,7 @@ export default function ContactMe() {
   ]
 
   return (
-    <div className='flex-col relative text-typography-white-100 overflow-hidden bg-gradient-to-tr from-[#28272C] to-[#28272C] w-full h-screen items-center text-center justify-between  flex'>
+    <div ref={ref_contact} className='flex-col relative text-typography-white-100 overflow-hidden bg-gradient-to-tr from-[#28272C] to-[#28272C] w-full h-screen items-center text-center justify-between  flex'>
       <article className='flex flex-col w-full h-screen relative max-h-fit py-10 gap-5 z-10 mt-8'>
         <BackgroundText white lines={["let's discuss", 'your project']} className='absolute top-1/4 ' />
         <SectionTitle title="Let's Discuss Your Project" emoji='🤩' className={'sm:!w-full md:!w-[400px]'} />

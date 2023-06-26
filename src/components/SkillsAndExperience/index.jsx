@@ -1,5 +1,8 @@
 import React from 'react'
 
+//context
+import { ScrollContext } from '@/pages'
+
 //components
 import SectionTitle from '../SectionTitle'
 import AnimateInView from '../AnimateInView'
@@ -11,6 +14,7 @@ import { IoMdColorPalette, IoMdThumbsUp } from 'react-icons/io'
 import { IoExtensionPuzzleSharp, IoPeopleCircle, IoSearch } from 'react-icons/io5'
 
 export default function SkillsAndExperience() {
+  const { ref_skills_and_experience } = React.useContext(ScrollContext)
 
   const skills = [
     {
@@ -58,7 +62,7 @@ export default function SkillsAndExperience() {
   ]
 
   return (
-    <div className='md:flex-row sm:flex-col text-typography-white-100 overflow-hidden pt-20 bg-gradient-to-tr from-[#28272C] to-[#28272C] w-full min-h-screen max-h-fit relative items-center text-center justify-between  flex'>
+    <div ref={ref_skills_and_experience} className='md:flex-row sm:flex-col text-typography-white-100 overflow-hidden pt-20 bg-gradient-to-tr from-[#28272C] to-[#28272C] w-full min-h-screen max-h-fit relative items-center text-center justify-between  flex'>
       <BackgroundText white lines={['Skills &', 'Experience']} className='absolute' />
       <article className='flex flex-col w-full h-full z-10'>
         <SectionTitle title='Skills & Experience' emoji='👨🏽‍💻' />
