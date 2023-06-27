@@ -24,8 +24,8 @@ export default function Home() {
   const title = "Galenomoon - Fullstack Developer: Showcasing Programming Skills and Expertise"
   const description = "Explore the diverse programming skills and expertise of Galenomoon, a fullstack developer specializing in web and application development. Discover a portfolio featuring innovative projects, cutting-edge technologies, and exceptional problem-solving abilities."
 
-  function scrollTo(ref) {
-    return ref?.current?.scrollIntoView({ behavior: 'smooth' })
+  function scrollTo(ref, is_mobile = false) {
+    return ref?.current?.scrollIntoView({ behavior: is_mobile ? 'auto' : 'smooth' })
   }
 
   return (

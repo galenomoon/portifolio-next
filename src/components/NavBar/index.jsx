@@ -43,9 +43,24 @@ export default function NavBar() {
   ]
 
   function mobileScrollTo(ref) {
-    return scrollTo(ref, () => setIsOpen(false))
+    setIsOpen(false)
+    return scrollTo(ref, true)
   }
 
+  const socials = [
+    {
+      Icon: BsGithub,
+      href: 'https://www.github.com/galenomoon',
+    },
+    {
+      Icon: BsLinkedin,
+      href: 'https://www.linkedin.com/in/guilherme-galeno-sena/',
+    },
+    {
+      Icon: IoLogoFigma,
+      href: 'https://www.figma.com/@galenomoon',
+    },
+  ]
 
   return (
     <>
@@ -87,10 +102,10 @@ export default function NavBar() {
                   Let&apos;s talk!
                 </motion.p>
                 <motion.div variants={container} className='flex items-center gap-2'>
-                  {[BsLinkedin, BsGithub, IoLogoFigma].map((Icon, index) =>
-                    <motion.div key={index} variants={item}>
-                      <Icon key={index} />
-                    </motion.div>
+                  {socials.map(({Icon, href}, index) =>
+                    <motion.a href={href} key={index} variants={item} target='_blank'>
+                      <Icon />
+                    </motion.a>
                   )}
                 </motion.div>
               </motion.div>
@@ -124,7 +139,7 @@ export default function NavBar() {
         </div>
         <div className='flex w-[70%] justify-end gap-10' >
           {navbar_options.map(({ name, ref }, index) =>
-            <motion.button onClick={() => mobileScrollTo(ref)} key={index} variants={item} className='text-start'>
+            <motion.button onClick={() => scrollTo(ref)} key={index} variants={item} className='text-start'>
               {name}
             </motion.button>
           )}
