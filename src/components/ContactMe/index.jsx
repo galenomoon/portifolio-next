@@ -67,7 +67,13 @@ export default function ContactMe() {
           © 2023 All Right Reserved
         </p>
         <p className='w-full flex items-center justify-center'>
-          Designed by <a href="https://www.linkedin.com/in/guilherme-galeno-sena/">Guilherme Galeno</a>
+          Designed by
+          <a
+            className='ml-1'
+            href="https://www.linkedin.com/in/guilherme-galeno-sena/"
+          >
+            Guilherme Galeno
+          </a>
         </p>
         <p className='flex gap-3 sm:justify-center md:justify-end items-center w-full'>
           <a href="https://www.linkedin.com/in/guilherme-galeno-sena/">
