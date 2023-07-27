@@ -27,6 +27,7 @@ export default function Projects() {
     {
       title: 'Life Cell',
       description: 'Developed a captivating Landing Page to promote and sell a Smartphone Repair Course.',
+      link: 'https://lifecell.vercel.app/',
       desktop_image: lifecell_desktop,
       mobile_image: lifecell_mobile
     },
@@ -39,7 +40,6 @@ export default function Projects() {
           <SectionTitle title='Latest Projects' emoji='🤯' />
         </div>
         <AnimateInView className={'w-full h-full'}>
-
         <Slider projects={projects} />
         </AnimateInView>
       </article>

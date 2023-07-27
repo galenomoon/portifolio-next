@@ -1,12 +1,14 @@
 import React from "react";
+
+//components
+import { Carousel } from 'flowbite-react';
 import BackgroundText from "../BackgroundText";
+
+//styles
+import { BsBoxArrowUpRight } from "react-icons/bs";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
-import { Carousel } from 'flowbite-react';
-
-
 export default function Slider({ projects = [] }) {
-
   return (
     <Carousel
       indicators={false}
@@ -15,11 +17,19 @@ export default function Slider({ projects = [] }) {
       rightControl={<SlArrowRight className="sm:text-3xl md:text-5xl text-typography-100" />}
     >
       {projects.map((project, index) => (
-        <div key={index} className="flex flex-col items-center h-full justify-center mb-4 z-20">
+        <div key={index} className="flex flex-col items-center h-full justify-center mb-4 z-20 cursor-default">
           <BackgroundText lines={[project?.title]} className='absolute' />
-          <h2 className="font-semibold text-5xl uppercase">
-            {project?.title}
-          </h2>
+          <a
+            href={project?.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex relative justify-center items-center hover:opacity-80 transition-opacity duration-300"
+          >
+            <h2 className="font-semibold text-5xl uppercase">
+              {project?.title}
+            </h2>
+            <BsBoxArrowUpRight className="absolute -right-10 text-2xl text-typography-100" />
+          </a>
           <p className="text-xl">
             {project?.description}
           </p>
