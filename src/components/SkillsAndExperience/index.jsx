@@ -30,7 +30,7 @@ export default function SkillsAndExperience() {
       Icon: () => <IoPeopleCircle size={35} />
     },
     {
-      label: "Lorem ipsum",
+      label: "Research",
       Icon: () => <IoSearch size={26} />
     },
     {
