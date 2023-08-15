@@ -49,7 +49,7 @@ export default function Projects() {
           <SectionTitle title='Latest Projects' emoji='🤯' />
         </div>
         <AnimateInView className={'w-full h-full'}>
-        <Slider projects={projects} />
+          <Slider projects={projects} />
         </AnimateInView>
       </article>
     </div >
