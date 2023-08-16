@@ -9,10 +9,16 @@ import AnimateInView from '../AnimateInView';
 import { ScrollContext } from '@/pages';
 
 //assets
+
+//Life Cell
 import lifecell_desktop from '../../assets/projects/lifecell/desktop.png'
 import lifecell_mobile from '../../assets/projects/lifecell/mobile.png'
+
+// Obraminha
 import obraminha_desktop from '../../assets/projects/obraminha/desktop.png'
 import obraminha_mobile from '../../assets/projects/obraminha/mobile.png'
+
+// Hi, Moon
 import himoon_desktop from '../../assets/projects/himoon/desktop.png'
 import himoon_mobile from '../../assets/projects/himoon/mobile.png'
 
