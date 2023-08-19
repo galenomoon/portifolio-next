@@ -133,7 +133,7 @@ export default function NavBar() {
             Brazil
           </motion.p>
           <motion.p variants={item} className='text-start'>
-            Currently Web Developer <br />
+            Currently Fullstack Developer <br />
             in Clear Cloud Software
           </motion.p>
         </div>
