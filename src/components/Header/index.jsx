@@ -21,7 +21,7 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiTypescript,
-  SiRuby,
+  SiJest,
 } from "react-icons/si";
 
 export default function FirstSection() {
@@ -66,9 +66,9 @@ export default function FirstSection() {
       href: "https://www.typescriptlang.org/",
     },
     {
-      Icon: SiRuby,
-      style: "md:hover:text-[#CC342D]",
-      href: "https://www.ruby-lang.org/pt/",
+      Icon: SiJest,
+      style: "md:hover:text-[#FFC107]",
+      href: "https://jestjs.io/docs/next/getting-started",
     },
     {
       Icon: BsGit,
