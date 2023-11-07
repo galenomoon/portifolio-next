@@ -8,7 +8,7 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
 //assets
 import Image from 'next/image';
-import logo from '../../assets/opacity_logo.png';
+import logo from '../../assets/logo_light.png';
 
 //context
 import { ScrollContext } from '@/pages';
@@ -64,6 +64,7 @@ export default function NavBar() {
 
   return (
     <>
+      {/* Mobile */}
       <motion.div
         variants={container}
         initial="hidden"
@@ -113,6 +114,7 @@ export default function NavBar() {
           }
         </motion.article>
       </motion.div>
+      {/* Desktop */}
       <motion.div
         variants={container}
         initial="hidden"

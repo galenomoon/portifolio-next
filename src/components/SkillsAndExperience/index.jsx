@@ -1,129 +1,152 @@
-import React from 'react'
+import React from "react";
 
 //context
-import { ScrollContext } from '@/pages'
+import { ScrollContext } from "@/pages";
 
 //components
-import SectionTitle from '../SectionTitle'
-import AnimateInView from '../AnimateInView'
-import BackgroundText from '../BackgroundText'
+import SectionTitle from "../SectionTitle";
+import AnimateInView from "../AnimateInView";
+import BackgroundText from "../BackgroundText";
 
 //icons
-import { FaLightbulb } from 'react-icons/fa'
-import { IoMdColorPalette, IoMdThumbsUp } from 'react-icons/io'
-import { IoExtensionPuzzleSharp, IoPeopleCircle, IoSearch } from 'react-icons/io5'
+import { FaLightbulb } from "react-icons/fa";
+import { IoMdColorPalette, IoMdThumbsUp } from "react-icons/io";
+import {
+  IoExtensionPuzzleSharp,
+  IoPeopleCircle,
+  IoSearch,
+} from "react-icons/io5";
 
 export default function SkillsAndExperience() {
-  const { ref_skills_and_experience } = React.useContext(ScrollContext)
+  const { ref_skills_and_experience } = React.useContext(ScrollContext);
 
   const skills = [
     {
       label: "Artistic vision",
-      Icon: () => <IoMdColorPalette size={30} />
+      Icon: () => <IoMdColorPalette size={30} />,
     },
     {
       label: "Creativity",
-      Icon: () => <FaLightbulb size={27} />
+      Icon: () => <FaLightbulb size={27} />,
     },
     {
       label: "Leadership",
-      Icon: () => <IoPeopleCircle size={35} />
+      Icon: () => <IoPeopleCircle size={35} />,
     },
     {
-      label: "Research",
-      Icon: () => <IoSearch size={26} />
+      label: "Attention to details",
+      Icon: () => <IoSearch size={26} />,
     },
     {
-      label: 'Good Practices',
-      Icon: () => <IoMdThumbsUp size={30} />
+      label: "Good Practices",
+      Icon: () => <IoMdThumbsUp size={30} />,
     },
     {
       label: "Problem solving",
-      Icon: () => <IoExtensionPuzzleSharp size={26} />
+      Icon: () => <IoExtensionPuzzleSharp size={26} />,
     },
-  ]
+  ];
 
   const experiences = [
     {
-      title: 'IM | Mix Institute',
-      subtitle: 'Smartphone software repair teacher',
-      period: '2021',
+      title: "IM | Mix Institute",
+      subtitle: "Smartphone software repair teacher",
+      period: "2021",
     },
     {
-      title: 'System Developer - Technical Course',
-      subtitle: 'Full Stack Developer - Etec Drª Ruth Cardoso, São Vicente - SP',
-      period: '2022',
+      title: "System Developer - Technical Course",
+      subtitle:
+        "Full Stack Developer - Etec Drª Ruth Cardoso, São Vicente - SP",
+      period: "2022",
     },
     {
-      title: 'Clear Cloud Software',
-      subtitle: 'Front-end Developer, Team Leader and UI/UX Designer',
-      period: 'now'
-    }
-  ]
+      title: "Clear Cloud Software",
+      subtitle: "Front-end Developer, Team Leader and UI/UX Designer",
+      period: "now",
+    },
+  ];
 
   return (
-    <div ref={ref_skills_and_experience} className='md:flex-row sm:flex-col text-typography-white-100 overflow-hidden pt-20 bg-gradient-to-tr from-[#28272C] to-[#28272C] w-full min-h-screen max-h-fit relative items-center text-center justify-between  flex'>
-      <BackgroundText white lines={['Skills &', 'Experience']} className='absolute' />
-      <article className='flex flex-col w-full h-full z-10'>
-        <SectionTitle title='Skills & Experience' emoji='👨🏽‍💻' />
-        <section className='flex flex-col w-full h-full text-start text-lg sm:px-12 md:px-28 gap-5'>
+    <div
+      ref={ref_skills_and_experience}
+      className="md:flex-row sm:flex-col text-typography-white-100 overflow-hidden pt-20 bg-background-night-dark w-full min-h-screen max-h-fit relative items-center text-center justify-between  flex"
+    >
+      <BackgroundText
+        white
+        lines={["Skills &", "Experience"]}
+        className="absolute left-0 z-0 w-full"
+      />
+      <article className="flex flex-col w-full h-full z-10">
+        <SectionTitle title="Skills & Experience" emoji="👨🏽‍💻" />
+        <section className="flex flex-col w-full h-full text-start text-lg sm:px-12 md:px-28 gap-5">
           <AnimateInView>
             <p>
-              — 🦋 A creative developer, my passion is solve <br /> problems and improve my self every day.
+              — 🦋 A creative developer, my passion is solve <br /> problems and
+              improve my self every day.
             </p>
           </AnimateInView>
-          <AnimateInView duration={'0.6s'}>
+          <AnimateInView duration={"0.6s"}>
             <p>
-              — 🎨 Artistic vision and the creativity are ones <br /> of my best qualities.
+              — 🎨 Artistic vision and the creativity are ones <br /> of my best
+              qualities.
             </p>
           </AnimateInView>
         </section>
-        <section className='flex flex-col w-full h-full text-start text-lg sm:px-12 md:px-28 gap-5 my-20'>
-          <AnimateInView direction='Y' inverse>
-            <h2 className="text-5xl font-semibold">
+        <section className="flex flex-col w-full h-full text-start text-lg sm:px-12 md:px-28 gap-5 my-20">
+          <AnimateInView direction="Y" inverse>
+            <h2 className="text-5xl font-semibold text-typography-100">
               Skills
             </h2>
           </AnimateInView>
-          <article className='grid md:grid-cols-3 sm:grid-cols-2 gap-3 w-fit'>
-            {skills?.map(({ label, Icon }, index) =>
-              <AnimateInView key={index} direction='Y' duration={`0.${4 + index}s`} className={'w-auto'}>
-                <div className='flex sm:items-center md:items-start flex-col sm:w-full md:w-fit justify-center gap-2'>
-                  <div className='text-typography-100 flex items-center justify-center w-[50px] h-[50px] bg-gradient-to-br from-[#A193B9] via-[#8A9EC0] to-[#709F9E] rounded-full'>
+          <article className="grid md:grid-cols-3 sm:grid-cols-2 gap-3 w-fit">
+            {skills?.map(({ label, Icon }, index) => (
+              <AnimateInView
+                key={index}
+                direction="Y"
+                duration={`0.${4 + index}s`}
+                className={"w-auto"}
+              >
+                <div className="flex sm:items-center md:items-start flex-col sm:w-full md:w-fit justify-center gap-2">
+                  <div className="text-background-night-dark flex items-center justify-center w-[50px] h-[50px] bg-background-moon rounded-full">
                     {Icon ? Icon() : null}
                   </div>
-                  <span className='text-md'>{label}</span>
+                  <span className="text-md">{label}</span>
                 </div>
               </AnimateInView>
-            )}
+            ))}
           </article>
         </section>
       </article>
-      <article className='flex flex-col jusify-between w-full h-fit relative'>
+      <article className="flex flex-col jusify-between w-full h-fit relative">
         <div className="justify-around flex flex-col h-fit ">
-          <AnimateInView direction='Y' inverse className={'self-center'}>
-            <h2 className="text-5xl font-semibold mb-10">
+          <AnimateInView direction="Y" inverse className={"self-center"}>
+            <h2 className="text-5xl font-semibold mb-10 text-typography-100">
               Experience
             </h2>
           </AnimateInView>
-          {experiences?.map((experience, index) =>
-            <AnimateInView key={index} duration={`0.${4 + index}s`} className={'w-full'}>
-              <div className='flex py-3 border-y-2 border-typography-white-300 mx-10'>
-                <div className='w-[60px] px-16 flex items-center justify-center'>
-                  <span className='text-lg font-light uppercase'>{experience.period}</span>
+          {experiences?.map((experience, index) => (
+            <AnimateInView
+              key={index}
+              duration={`0.${4 + index}s`}
+              className={"w-full"}
+            >
+              <div className="flex py-3 border-y-2 border-typography-white-300 mx-10">
+                <div className="w-[60px] px-16 flex items-center justify-center">
+                  <span className="text-lg font-light uppercase">
+                    {experience.period}
+                  </span>
                 </div>
                 <div className="flex flex-col text-start justify-center">
-                  <p className="text-xl font-semibold">
-                    {experience.title}
-                  </p>
-                  <span className='text-typography-white-300 text-md'>
+                  <p className="text-xl font-semibold">{experience.title}</p>
+                  <span className="text-typography-white-300 text-md">
                     {experience.subtitle}
                   </span>
                 </div>
               </div>
             </AnimateInView>
-          )}
+          ))}
         </div>
       </article>
     </div>
-  )
+  );
 }
