@@ -48,6 +48,8 @@ export default function Home() {
           <title>{title}</title>
           <meta name="og:title" content={title} />
           <meta name="og:image" content={banner} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
           <meta name="og:type" content="website" />
           <meta name="og:site_name" content="Galenomoon" />
           <meta name="description" content={description} />
