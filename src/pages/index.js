@@ -14,17 +14,12 @@ import banner from "@/assets/banner.png";
 //context
 export const ScrollContext = createContext(null);
 
-export default function Home() {
+export default function Home({ title, description, image }) {
   const ref_first_section = createRef(() => {});
   const ref_skills_and_experience = createRef(() => {});
   const ref_repository_and_figma = createRef(() => {});
   const ref_projects = createRef(() => {});
   const ref_contact = createRef(() => {});
-
-  const title =
-    "Galenomoon - Fullstack Developer: Showcasing Programming Skills and Expertise";
-  const description =
-    "Explore the diverse programming skills and expertise of Galenomoon, a fullstack developer specializing in web and application development. Discover a portfolio featuring innovative projects, cutting-edge technologies, and exceptional problem-solving abilities.";
 
   function scrollTo(ref, is_mobile = false) {
     return ref?.current?.scrollIntoView({
@@ -47,7 +42,7 @@ export default function Home() {
         <Head>
           <title>{title}</title>
           <meta name="og:title" content={title} />
-          <meta name="og:image" content={banner} />
+          <meta name="og:image" content={image} />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta name="og:type" content="website" />
@@ -64,4 +59,16 @@ export default function Home() {
       </main>
     </ScrollContext.Provider>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title:
+        "Galenomoon - Fullstack Developer: Showcasing Programming Skills and Expertise",
+      description:
+        "Explore the diverse programming skills and expertise of Galenomoon, a fullstack developer specializing in web and application development. Discover a portfolio featuring innovative projects, cutting-edge technologies, and exceptional problem-solving abilities.",
+      image: banner,
+    },
+  };
 }
