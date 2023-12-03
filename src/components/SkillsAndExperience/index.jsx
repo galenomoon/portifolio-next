@@ -54,13 +54,13 @@ export default function SkillsAndExperience() {
       title: "System Developer - Technical Course",
       subtitle:
         "Full Stack Developer - Etec Drª Ruth Cardoso, São Vicente - SP",
-      period: "2022",
+      period: "2021",
     },
     {
       title: "Clear Cloud Software",
       subtitle: "Front-end Developer, Team Leader and UI/UX Designer",
       linkedin: "https://www.linkedin.com/company/cleardev/",
-      period: "2022 ~ 2023",
+      period: "2021 ~ 2023",
     },
     {
       title: "Contele Soluções Tecnológicas",
